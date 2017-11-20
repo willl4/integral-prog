@@ -39,25 +39,30 @@ interval = domainval/internum
 x = float(lbound)
 fval = []
 tot=0.0
-for i in range(0,internum-1):
+for i in range(0,internum):
     tot=float(eval(function))
     fval.append(tot)
+    x+=interval
+
+x = float(lbound+interval)
+rval = []
+rum = 0.0
+for i in range(0,internum):
+    rum=float(eval(function))
+    rval.append(rum)
     x+=interval
     
 x = float(lbound+(interval/2))
 nval = []
 num = 0.0
-for i in range(0,internum-1):
-    num=float(eval(functon))
+for i in range(0,internum):
+    num=float(eval(function))
     nval.append(num)
     x+=interval
 
 lram = fval
-rram = fval
+rram = rval
 mram = nval
-del rram[0]
-del lram[internum-1]
-del mmram[internum-1]
 lramnew = [i * interval for i in lram]
 lramsum = sum(lramnew)
 rramnew = [i * interval for i in rram]
