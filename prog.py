@@ -69,7 +69,11 @@ rramnew = [i * interval for i in rram]
 rramsum = sum(rramnew)
 mramnew = [i * interval for i in mram]
 mramsum = sum(mramnew)
+trap = (lramsum+rramsum)/2
+simp = ((2*mramsum)+trap)/3
 print('LRAM =',lramsum)
 print('RRAM =',rramsum)
 print('MRAM =',mramsum)
+print('TRAP =',trap)
+print('SIMP=',simp)
                  
